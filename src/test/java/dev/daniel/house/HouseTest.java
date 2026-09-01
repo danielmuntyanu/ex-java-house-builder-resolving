@@ -11,7 +11,6 @@ import dev.daniel.enums.SwimmingPool;
 import dev.daniel.garage.Garage;
 
 
-// тестирую get-функции и конструтор
 public class HouseTest {
 
     @Test
