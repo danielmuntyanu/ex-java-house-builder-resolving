@@ -1,6 +1,7 @@
 package dev.daniel.house;
 
 import dev.daniel.enums.HouseDesign;
+import dev.daniel.enums.SwimmingPool;
 
 public class House {
     private int floors;
