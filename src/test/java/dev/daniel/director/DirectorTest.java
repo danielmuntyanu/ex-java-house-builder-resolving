@@ -5,6 +5,7 @@ import static org.hamcrest.Matchers.*;
 
 import org.junit.jupiter.api.Test;
 
+import dev.daniel.enums.SwimmingPool;
 import dev.daniel.garage.Garage;
 import dev.daniel.house.House;
 import dev.daniel.house.HouseBuilder;
@@ -24,6 +25,20 @@ public class DirectorTest {
         assertThat(houseWithGarage.getSwimmingPool(), is(nullValue()));
         assertThat(houseWithGarage.getGarden(), is(nullValue()));
         assertThat(houseWithGarage.getStatues(), is(equalTo(0)));
+    }
+
+    @Test
+    void testDirector_ShouldCreateHouseWithSwimmingPool() {
+        Director director = new Director();
+        IBuilder builder = new HouseBuilder();
+
+        House houseWithSwimmingPool = director.constructHouseWithSwimmingPool(builder);
+
+        assertThat(houseWithSwimmingPool, is(instanceOf(House.class)));
+        assertThat(houseWithSwimmingPool.getSwimmingPool(), is(instanceOf(SwimmingPool.class)));
+        assertThat(houseWithSwimmingPool.getGarage(), is(nullValue()));
+        assertThat(houseWithSwimmingPool.getGarden(), is(nullValue()));
+        assertThat(houseWithSwimmingPool.getStatues(), is(equalTo(0)));
     }
 
 }
