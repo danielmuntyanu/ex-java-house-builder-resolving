@@ -9,6 +9,7 @@ public class House {
     private String color;
     private HouseDesign design;
     private float area;
+    private float price;
 
     private SwimmingPool swimmingPool;
     private Garden garden;
