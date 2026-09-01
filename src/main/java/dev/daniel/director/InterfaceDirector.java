@@ -9,8 +9,8 @@ public interface InterfaceDirector {
 
     House constructHouseWithFancyStatues(IBuilder builder);
 
-    House constructHouseWithSwimmingPool(IBuilder builder);
-    
-    House constructHouseWithGarden(IBuilder builder);
+    House constructHouseWithSwimmingPool(IBuilder builder); 
+
+    House constructHouseWithGarden(IBuilder builder); 
 
 }
