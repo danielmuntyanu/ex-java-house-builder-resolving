@@ -47,15 +47,28 @@ public class DirectorTest {
         Director director = new Director();
         IBuilder builder = new HouseBuilder();
 
-        House houseWithSGarden = director.constructHouseWithGarden(builder);
+        House houseWithGarden = director.constructHouseWithGarden(builder);
 
-        assertThat(houseWithSGarden, is(instanceOf(House.class)));
-        assertThat(houseWithSGarden.getGarden(), is(instanceOf(Garden.class)));
-        assertThat(houseWithSGarden.getGarage(), is(nullValue()));
-        assertThat(houseWithSGarden.getSwimmingPool(), is(nullValue()));
-        assertThat(houseWithSGarden.getStatues(), is(equalTo(0)));
+        assertThat(houseWithGarden, is(instanceOf(House.class)));
+        assertThat(houseWithGarden.getGarden(), is(instanceOf(Garden.class)));
+        assertThat(houseWithGarden.getGarage(), is(nullValue()));
+        assertThat(houseWithGarden.getSwimmingPool(), is(nullValue()));
+        assertThat(houseWithGarden.getStatues(), is(equalTo(0)));
     }
 
-    
+
+    @Test
+    void testDirector_ShouldCreateHouseWithStatues() {
+        Director director = new Director();
+        IBuilder builder = new HouseBuilder();
+
+        House houseWithFancyStatues = director.constructHouseWithFancyStatues(builder);
+
+        assertThat(houseWithFancyStatues, is(instanceOf(House.class)));
+        assertThat(houseWithFancyStatues.getStatues(), is(instanceOf(Integer.class)));
+        assertThat(houseWithFancyStatues.getGarden(), is(nullValue()));
+        assertThat(houseWithFancyStatues.getGarage(), is(nullValue()));
+        assertThat(houseWithFancyStatues.getSwimmingPool(), is(nullValue()));
+    }
 
 }
