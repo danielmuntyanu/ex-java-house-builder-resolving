@@ -1,5 +1,7 @@
 package dev.daniel.house;
 
+import dev.daniel.enums.HouseDesign;
+
 public class House {
     private int floors;
     private String color;
