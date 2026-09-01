@@ -2,6 +2,7 @@ package dev.daniel.director;
 
 import dev.daniel.enums.Garden;
 import dev.daniel.enums.HouseDesign;
+import dev.daniel.enums.SwimmingPool;
 import dev.daniel.garage.Garage;
 import dev.daniel.house.House;
 import dev.daniel.house.IBuilder;
@@ -41,7 +42,7 @@ public class Director implements InterfaceDirector {
     @Override
     public House constructHouseWithGarden(IBuilder builder) {
         House houseWithGarden = builder
-            .setArea(700000F)
+            .setArea(700F)
             .setDesign(HouseDesign.GEORGIAN)
             .setFloors(2)
             .setColor("Brown")
@@ -54,8 +55,16 @@ public class Director implements InterfaceDirector {
 
     @Override
     public House constructHouseWithSwimmingPool(IBuilder builder) {
-        // TODO Auto-generated method stub
-        return null;
+        House houseWithSwimmingPool = builder
+            .setArea(1200F)
+            .setDesign(HouseDesign.SPANISH)
+            .setFloors(3)
+            .setColor("black")
+            .setPrice(1000000F)
+            .setSwimmingPool(SwimmingPool.BIG)
+            .getResult();
+        
+        return houseWithSwimmingPool;
     }
 
 }
