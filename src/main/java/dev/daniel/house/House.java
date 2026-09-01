@@ -13,7 +13,7 @@ public class House {
 
     private SwimmingPool swimmingPool;
     private Garden garden;
-    private FancyStatues statues;
-    private Garage garage;
+    private int statues;
+    private boolean garage;
 
 }
