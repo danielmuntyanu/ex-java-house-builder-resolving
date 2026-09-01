@@ -7,6 +7,7 @@ import dev.daniel.garage.Garage;
 
 public interface IBuilder {
 
+    IBuilder setPrice(float price);
     IBuilder setFloors(int floors);
     IBuilder setColor(String color);
     IBuilder setDesign(HouseDesign design);

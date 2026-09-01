@@ -18,6 +18,11 @@ public class HouseBuilder implements IBuilder {
     private int statues;
     private Garage garage;
 
+    @Override
+    public IBuilder setPrice(float price) {
+        this.price = price;
+        return this;
+    }
 
     @Override
     public IBuilder setArea(float area) {
