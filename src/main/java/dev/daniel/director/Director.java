@@ -1,5 +1,6 @@
 package dev.daniel.director;
 
+import dev.daniel.enums.Garden;
 import dev.daniel.enums.HouseDesign;
 import dev.daniel.garage.Garage;
 import dev.daniel.house.House;
@@ -39,8 +40,16 @@ public class Director implements InterfaceDirector {
 
     @Override
     public House constructHouseWithGarden(IBuilder builder) {
-        // TODO Auto-generated method stub
-        return null;
+        House houseWithGarden = builder
+            .setArea(700000F)
+            .setDesign(HouseDesign.GEORGIAN)
+            .setFloors(2)
+            .setColor("Brown")
+            .setPrice(800000F)
+            .setGarden(Garden.FULL)
+            .getResult();
+        
+        return houseWithGarden;
     }
 
     @Override
