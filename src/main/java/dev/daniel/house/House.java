@@ -1,5 +1,7 @@
 package dev.daniel.house;
 
+import java.math.BigDecimal;
+
 import dev.daniel.enums.Garden;
 import dev.daniel.enums.HouseDesign;
 import dev.daniel.enums.SwimmingPool;
@@ -11,14 +13,14 @@ public class House {
     private String color;
     private HouseDesign design;
     private float area;
-    private float price;
+    private BigDecimal price;
 
     private SwimmingPool swimmingPool;
     private Garden garden;
     private int statues;
     private Garage garage;
     
-    public House(int floors, String color, HouseDesign design, float area, float price, SwimmingPool swimmingPool,
+    public House(int floors, String color, HouseDesign design, float area, BigDecimal price, SwimmingPool swimmingPool,
             Garden garden, int statues, Garage garage) {
         this.floors = floors;
         this.color = color;
@@ -47,7 +49,7 @@ public class House {
         return area;
     }
 
-    public float getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 

@@ -1,5 +1,7 @@
 package dev.daniel.director;
 
+import java.math.BigDecimal;
+
 import dev.daniel.enums.Garden;
 import dev.daniel.enums.HouseDesign;
 import dev.daniel.enums.SwimmingPool;
@@ -16,7 +18,9 @@ public class Director implements InterfaceDirector {
             .setArea(500F)
             .setFloors(2)
             .setColor("White")
-            .setPrice(750000F)
+            .setPrice(
+                new BigDecimal("750000.00")
+            )
             .setStatues(4)
             .getResult();
         
@@ -30,7 +34,9 @@ public class Director implements InterfaceDirector {
             .setArea(300F)
             .setFloors(1)
             .setColor("Gray")
-            .setPrice(400000F)
+            .setPrice(
+                new BigDecimal("400000.00")
+            )
             .setGarage(
                 new Garage(50F, 1, true)
             )
@@ -46,7 +52,9 @@ public class Director implements InterfaceDirector {
             .setDesign(HouseDesign.GEORGIAN)
             .setFloors(2)
             .setColor("Brown")
-            .setPrice(800000F)
+            .setPrice(
+                new BigDecimal("800000.00")
+            )
             .setGarden(Garden.FULL)
             .getResult();
         
@@ -60,7 +68,9 @@ public class Director implements InterfaceDirector {
             .setDesign(HouseDesign.SPANISH)
             .setFloors(3)
             .setColor("black")
-            .setPrice(1000000F)
+            .setPrice(
+                new BigDecimal("1000000.00")
+            )
             .setSwimmingPool(SwimmingPool.BIG)
             .getResult();
         

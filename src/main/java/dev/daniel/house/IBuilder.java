@@ -1,5 +1,7 @@
 package dev.daniel.house;
 
+import java.math.BigDecimal;
+
 import dev.daniel.enums.Garden;
 import dev.daniel.enums.HouseDesign;
 import dev.daniel.enums.SwimmingPool;
@@ -7,7 +9,7 @@ import dev.daniel.garage.Garage;
 
 public interface IBuilder {
 
-    IBuilder setPrice(float price);
+    IBuilder setPrice(BigDecimal price);
     IBuilder setFloors(int floors);
     IBuilder setColor(String color);
     IBuilder setDesign(HouseDesign design);
