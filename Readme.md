@@ -63,8 +63,7 @@ classDiagram
         -swimmingPool SwimmingPool
         -statues int
         -garage Garage
-        +House(floors int , color String, design HouseDesign, area float, price BigDecimal, swimmingPool SwimmingPool,
-            garden Garden, statues int, garage Garage) House
+        +House(floors int , color String, design HouseDesign, area float, price BigDecimal, swimmingPool SwimmingPool, garden Garden, statues int, garage Garage) House
         +getPrice() BigDecimal
         +getArea() float
         +getFloors() int
